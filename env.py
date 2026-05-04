@@ -8,13 +8,14 @@ danno = random.randint(danno_base, danno_critico_aumento)
 
 
 # CARATTERISTICHE EROE
-PIANI = 100
-HP = 100
+PIANO_ATTUALE = 0
+ULTIMO_PIANO = 100
+HP = 10000
 DANNO = 4
 DIFESA = 0
 DANNO = danno
 SOLDI = 0
-
+INVENTARIO = ["pozione di cura"]
 
 # COLORI
 ROSSO = "\033[91m"
