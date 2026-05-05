@@ -8,7 +8,7 @@ danno = random.randint(danno_base, danno_critico_aumento)
 
 
 # CARATTERISTICHE EROE
-PIANO_ATTUALE = 0
+PIANO_ATTUALE = 9
 ULTIMO_PIANO = 100
 HP = 10000
 DANNO = 4
@@ -25,6 +25,27 @@ BLU = "\033[94m"
 VIOLA = "\033[95m"
 CIANO = "\033[96m"
 RESET = "\033[0m"
+
+
+#NEGOZIO
+MARKETPLACE = [
+    ("pozione di cura", 5)
+    ("panacea abissale", 15)
+    ("spada ancestrale", 20)
+    ("patata cotta", 3)
+    ("orecchio di pipistrello", 16)
+    ("cristallo di ametista", 17)
+    ("dente di vipera", 25)
+]
+
+
+
+
+
+
+
+
+
 
 #NEMICI NORMALI
 ragno =r"""                                  
@@ -147,3 +168,4 @@ loot_boss = boss_scelto[4]
 
 
 #promemoria signiore delli specchi(te stesso)
+

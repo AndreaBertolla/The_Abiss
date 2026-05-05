@@ -32,7 +32,10 @@ def esplora():
         print("Non hai incontrato nessun mostro e non hai trovato nulla.")
     elif nome_mostro == "NULLA":
         print(f"Non hai incontrato nessun mostro ma hai trovato {OGGETTO}.")
-        INVENTARIO.append(OGGETTO)
+        if OGGETTO == "5 monete":
+            SOLDI+5
+        else:
+            INVENTARIO.append(OGGETTO)
     elif OGGETTO == "nulla":
         print(f"Hai incontrato un {nome_mostro} ma non hai trovato nulla.")
         battaglia_mostro(nome_mostro, ascii_mostro, vita_mostro, danno_mostro, danno_critico_aumento)
@@ -95,3 +98,21 @@ def cura():
         print(f"Hai usato una pozione di cura hai recuperato 50HP, HP: {HP}")
     else:
         print("Non hai pozioni di cura nel tuo inventario.")
+
+
+
+
+
+def negozio():
+    global MARKETPLACE
+    STOCK = random.choice(MARKETPLACE)
+    oggetto = STOCK[0]
+    prezzo = STOCK[1]
+    print(f"gli oggetti momentanemente presenti nel negozio sono:")
+    n = 0
+    for i in STOCK:
+        print(f"{n}){i}")
+        n+=1
+    
+    scielta = input("Cosa vuoi comprare: ")
+
