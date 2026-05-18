@@ -25,17 +25,21 @@ while gioco:
                 PIANO_ATTUALE+=1
             
             else:
-                print(f"{VERDE}HP: {HP}{RESET} | {GIALLO} DIFESA: {DIFESA}{RESET} | {ROSSO} ATTACCO: {danno_base}{RESET} | {GIALLO} SOLDI: {SOLDI}{RESET} | {CIANO} PIANO: {PIANO_ATTUALE}/{ULTIMO_PIANO} {RESET}")
+                print(f"{VERDE}HP: {env.HP}{RESET} | {GIALLO} DIFESA: {env.DIFESA}{RESET} | {ROSSO} ATTACCO: {env.DANNO}{RESET} | {GIALLO} SOLDI: {env.SOLDI}{RESET} | {CIANO} PIANO: {PIANO_ATTUALE}/{ULTIMO_PIANO} {RESET}")
                 azione = input(f"Cosa vuoi fare {nome}? Esplora | Inventario: ").lower()
                 if azione not in ["esplora", "inventario"]:
                     print("Azione non valida. Riprova.")
                 else:
                     if azione == "esplora":
+                        if int(PIANO_ATTUALE)%11 == 0 and int(PIANO_ATTUALE)>0:
+                            battaglia_boss()
+                        else:
+                            esplora()
+
+
                         PIANO_ATTUALE += 1
-                        esplora()
                     elif azione == "inventario":
-                        print(INVENTARIO)
-                        print("cci")
+                        inventario()
 
 
 

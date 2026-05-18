@@ -1,21 +1,21 @@
 import random
 
 
-# VARIABILI UTILI
-danno_critico_aumento = 5
-danno_base = 4
-danno = random.randint(danno_base, danno_critico_aumento)
 
 
 # CARATTERISTICHE EROE
 PIANO_ATTUALE = 9
 ULTIMO_PIANO = 100
 HP = 10000
-DANNO = 4
+DANNO = 10
+CRITICO = DANNO + 8
 DIFESA = 0
-DANNO = danno
-SOLDI = 0
-INVENTARIO = ["pozione di cura"]
+SOLDI = 1000
+INVENTARIO = ["pozione di cura","sciettro degli inferi"]
+
+
+
+
 
 # COLORI
 ROSSO = "\033[91m"
@@ -29,13 +29,13 @@ RESET = "\033[0m"
 
 #NEGOZIO
 MARKETPLACE = [
-    ("pozione di cura", 5)
-    ("panacea abissale", 15)
-    ("spada ancestrale", 20)
-    ("patata cotta", 3)
-    ("orecchio di pipistrello", 16)
-    ("cristallo di ametista", 17)
-    ("dente di vipera", 25)
+  ("pozione di cura", 5),
+  ("panacea abissale", 15),
+  ("spada ancestrale", 35),
+  ("patata cotta", 3),
+  ("orecchio di pipistrello", 16),
+  ("cristallo di ametista", 17),
+  ("dente di vipera", 30)
 ]
 
 
@@ -118,7 +118,7 @@ _||_    .-;`\..../`;_.-^-._
 lista_mostri = [
     ("Ragno", ragno, 21, 1, 7),
     ("Strega", strega, 55, 5, 11),
-    ("Cavaliere", cavaliere, 42, 1, 16),
+    ("Cavaliere", cavaliere, 42, 1, 14),
     ("NULLA", "NULLA", "NULLA", "NULLA", "NULLA")
 ]
 
@@ -153,19 +153,9 @@ satana = r"""               ,-.
 
 
 lista_boss = [
-    ("Satana", satana, 501, random.randint(40,60), random.choice(["Sciettro degli inferi", "Corno del diavolo", "Occhio degli inferi"]))
+    ("Satana", satana, 501, 40, 60, ["sciettro degli inferi", "corno del diavolo", "occhio degli inferi"])
 
 ]
-
-
-boss_scelto = random.choice(lista_boss)
-
-nome_boss = boss_scelto[0]
-ascii_boss = boss_scelto[1]
-vita_boss = boss_scelto[2]
-attacco_boss = boss_scelto[3]
-loot_boss = boss_scelto[4]
-
 
 #promemoria signiore delli specchi(te stesso)
 
