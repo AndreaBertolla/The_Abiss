@@ -42,7 +42,8 @@ def calcolo_danno_boss(danno_base, critico_boss):
     return danno_finale
 
 def calcolo_danno_avventuriero(danno_base, critico_avventuriero):
-    danno_finale = random.randint(danno_base, critico_avventuriero)
+    critico = danno_base + critico_avventuriero
+    danno_finale = random.randint(danno_base, critico)
     return danno_finale
 
 def esplora():
@@ -87,7 +88,7 @@ def battaglia_mostro(nome_mostro, ascii_mostro, vita_mostro, danno_mostro, danno
             
         elif azione == "attacca":
             danno_subito = calcolo_danno_mostro(danno_mostro, danno_critico_aumento)
-            danno_finale = calcolo_danno_avventuriero(DANNO, CRITICO)
+            danno_finale = calcolo_danno_avventuriero(env.DANNO, env.CRITICO)
             vita_mostro -= danno_finale
             print(f"Hai inflitto {danno_finale} di danno al {nome_mostro}, ora ha {vita_mostro} {ROSSO}HP{RESET}.")
             
@@ -125,7 +126,7 @@ def battaglia_boss():
             
         elif azione == "attacca":
             danno_subito = calcolo_danno_boss(danno_boss, danno_critico_aumento)
-            danno_finale = calcolo_danno_avventuriero(DANNO, CRITICO)
+            danno_finale = calcolo_danno_avventuriero(env.DANNO, env.CRITICO)
             vita_boss -= danno_finale
             print(f"Hai inflitto {danno_finale} di danno al {nome_boss}, ora ha {vita_boss} {ROSSO}HP{RESET}.")
             
@@ -147,7 +148,7 @@ def battaglia_boss():
 
             
         
-    return env.HP, DANNO, INVENTARIO 
+    return env.HP, env.DANNO, env.INVENTARIO 
 
 
 

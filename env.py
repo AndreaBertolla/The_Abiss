@@ -4,12 +4,13 @@ import random
 
 
 # CARATTERISTICHE EROE
+
 DANNO_CRITICO = 8
-PIANO_ATTUALE = 0
+PIANO_ATTUALE = 9
 ULTIMO_PIANO = 100
 HP = 100
 DANNO = 10
-CRITICO = DANNO + DANNO_CRITICO
+CRITICO = DANNO_CRITICO
 DIFESA = 0
 SOLDI = 1000
 INVENTARIO = ["pozione di cura","scettro degli inferi","corno del diavolo", "occhio degli inferi"]
@@ -154,7 +155,7 @@ satana = r"""               ,-.
 
 
 lista_boss = [
-    ("Satana", satana, 501, 40, 60, ["scettro degli inferi", "corno del diavolo", "occhio degli inferi"])
+    ("Satana", satana, 250, 40, 60, ["scettro degli inferi", "corno del diavolo", "occhio degli inferi"])
 
 ]
 
