@@ -191,12 +191,12 @@ def inventario():
                 INVENTARIO.remove(oggetto_scelto)
                 break
             elif oggetto_scelto == "cristallo di ametista":
-                env.CRITICO += 5
+                env.DANNO_CRITICO += 5
                 print(f"Hai usato il cristallo di ametista, il tuo danno critico è aumentato di 5, {VIOLA}danno critico: {env.CRITICO}{RESET}")
                 INVENTARIO.remove(oggetto_scelto)
                 break
             elif oggetto_scelto == "dente di vipera":
-                env.CRITICO += 10
+                env.DANNO_CRITICO += 10
                 print(f"Hai usato il dente di vipera, il tuo danno critico è aumentato di 10, {VIOLA}danno critico: {env.CRITICO}{RESET}")
                 INVENTARIO.remove(oggetto_scelto)
                 break
@@ -224,15 +224,15 @@ def inventario():
                 print(f"Hai usato il corno del diavolo {VERDE}+50 HP: {env.HP}{RESET} | {ROSSO}+10 DANNO: {env.DANNO}{RESET} | {GIALLO}+3 DIFESA: {env.DIFESA}{RESET}")
                 INVENTARIO.remove(oggetto_scelto)
                 break
-            elif oggetto_scelto == "sciettro degli inferi":
+            elif oggetto_scelto == "scettro degli inferi":
                 env.DANNO += 30
-                print(f"Hai usato lo sciettro degli inferi {ROSSO}+30 DANNO: {env.DANNO}{RESET}")
+                print(f"Hai usato lo scettro degli inferi {ROSSO}+30 DANNO: {env.DANNO}{RESET}")
                 INVENTARIO.remove(oggetto_scelto)
                 break
         else:
             print("Scelta non valida. Riprova.")
 
-    return env.HP, INVENTARIO, env.DIFESA, env.DANNO, env.CRITICO
+    return env.HP, INVENTARIO, env.DIFESA, env.DANNO, env.CRITICO, env.DANNO_CRITICO
 
         
 

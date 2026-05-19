@@ -5,7 +5,7 @@ from func import *
 gioco = True
 
 print(" BENVENUTO NELL'ABISSO ")
-print("VERSIONE 0.0.1")
+print("VERSIONE 0.1")
 print("caricamento")
 time.sleep(1)
 print("caricamento.")
@@ -36,9 +36,7 @@ while gioco:
                             battaglia_boss()
                         else:
                             esplora()
-
-
-                        PIANO_ATTUALE += 1
+                            PIANO_ATTUALE += 1
                     elif azione == "inventario":
                         inventario()
 
