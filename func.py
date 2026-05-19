@@ -125,7 +125,7 @@ def battaglia_boss():
             
         elif azione == "attacca":
             danno_subito = calcolo_danno_boss(danno_boss, danno_critico_aumento)
-            danno_finale = calcolo_danno_avventuriero(env.DANNO, env.CRITICO)
+            danno_finale = calcolo_danno_avventuriero(DANNO, CRITICO)
             vita_boss -= danno_finale
             print(f"Hai inflitto {danno_finale} di danno al {nome_boss}, ora ha {vita_boss} {ROSSO}HP{RESET}.")
             

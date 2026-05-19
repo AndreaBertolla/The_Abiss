@@ -5,6 +5,7 @@ from func import *
 gioco = True
 
 print(" BENVENUTO NELL'ABISSO ")
+print("VERSIONE 0.0.1")
 print("caricamento")
 time.sleep(1)
 print("caricamento.")
